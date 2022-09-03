@@ -60,6 +60,11 @@ button {
   font-family: inherit;
 }
 
+section {
+  max-width: 1600px;
+  margin: auto;
+}
+
 /* !GENERAL */
 
 /* class which hide something */
