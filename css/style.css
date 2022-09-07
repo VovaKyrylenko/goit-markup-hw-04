@@ -60,11 +60,6 @@ button {
   font-family: inherit;
 }
 
-section {
-  max-width: 1600px;
-  margin: auto;
-}
-
 /* !GENERAL */
 
 /* class which hide something */
@@ -83,7 +78,7 @@ section {
 
 /* container */
 .container {
-  width: 1170px;
+  width: 1200px;
   padding-left: 15px;
   padding-right: 15px;
   margin: auto;
@@ -113,12 +108,13 @@ section {
   display: flex;
   gap: 10px;
   justify-content: center;
-  padding-bottom: 30px;
+  margin-bottom: 30px;
 }
 
 /* item in list of social-links  */
 ul.social-links-list li.item {
-  padding: 12px;
+  width: 44px;
+  height: 44px;
   border-radius: 50%;
 }
 
@@ -126,6 +122,14 @@ ul.social-links-list li.item {
 ul.social-links-list li.item svg {
   fill: var(--svg-cl);
   display: block;
+}
+
+ul.social-links-list a {
+  max-width: 100%;
+  min-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* svg in item :hover */
@@ -252,8 +256,13 @@ ul.product-list li.item {
   width: 370px;
 }
 
+ul.product-list li.item a{
+  display: block;
+}
+
+
 /* Every product in product-list :hover */
-ul.product-list li.item:hover {
+ul.product-list li.item a:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
 }
@@ -293,7 +302,11 @@ li.item div.product-wrp {
 
 section.hero {
   background-image: url("../images/background/hero-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 200px 0;
+  max-width: 1600px;
+  margin: auto; 
 }
 
 /* text "Ефективні рішення для вашого бізнесу" */
@@ -339,8 +352,7 @@ section.hero {
   align-items: center;
   justify-content: center;
   max-width: 100%;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  height: 120px;
   margin-bottom: 30px;
   background-color: var(--btn-bg-cl);
   border-radius: 4px;
@@ -441,7 +453,7 @@ section.hero {
   line-height: calc(19 / 16);
   text-align: center;
   color: var(--secondary-text-cl);
-  margin-bottom: 30px;
+  margin-bottom: 16px;
 }
 
 /* list with our clients */
@@ -454,7 +466,11 @@ ul.clients-list {
 /* item in list with our clients */
 ul.clients-list li.item {
   fill: var(--social-links-cl);
-  padding: 16px 32px;
+  height: 92px;
+  width: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1px solid var(--social-links-cl);
   border-radius: 4px;
 }
@@ -490,6 +506,8 @@ ul.clients-list li.item:hover svg {
 /* custom container for footer */
 .footer .container {
   display: flex;
+  gap: 70px;
+  align-items: baseline;
 }
 
 /* wrapper of footer content */
